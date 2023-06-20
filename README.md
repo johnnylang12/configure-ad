@@ -45,9 +45,14 @@ At first the ping will not work correctly. We have to enable ICMPv4 on the firew
 </p>
 Now we can ping DC-1 successfully from Client-1.
 <img src="https://i.imgur.com/1lrrGPw.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<h3>Step 2: Install Active Directory, Users & Computers</h3>
 <p>
 Now we will log back into DC-1 to install AD Users & Computers. Promote the VM to DC, setup a new forest as "mydomain.com" afterwards restart then log back into DC-1 as user: "mydomain.com\labuser". If executed properly, you should be able to run AD Users & Computers as shown below.
 </p>
+<img src="https://i.ibb.co/KxktnNT/Active-Directory-5.jpg" height="80%" width="60%" alt="Active Directory"/>
+<img src="https://i.ibb.co/BjZ4gLn/Active-Directory-6.jpg" height="80%" width="60%" alt="Active Directory"/>
+
+
 <img src="https://i.imgur.com/cGjvRke.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 We can start creating Organizational Units (OU). Let's first create an OU named _EMPLOYEES. Create another OU named _ADMINS. In order to do that, right click on the domain area. Select new->Organizational Unit and fill out the field. Then click inside of your OU and right click, select new and select user and fill out the information for your new user. The user should be named Jane Doe, she is going to be an Admin so her username will be Jane_admin. Lastly add Jane to the domain admins security group. 
